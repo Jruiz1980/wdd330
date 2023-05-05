@@ -11,7 +11,7 @@ header {
     justify-content: center;
     border-radius: 2%;
 }
-h1, h2{
+section {
     grid-column:2/3;
 }
 img {
