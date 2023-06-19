@@ -1,3 +1,18 @@
 body {
-    width:0%;
+    width:60%;
+    background:#A59CD3;
+}
+header {
+    display:grid;
+    grid-template-columns: 1fr;
+}
+h1 {
+    font-family:'Times New Roman', Times, sans-serif;
+    color:#2C5D37;
+    font-size: 3em;
+    border-style: dotted;
+    text-align: center;
+}
+img {
+    max-width:70%;
 }
