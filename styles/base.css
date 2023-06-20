@@ -30,6 +30,9 @@ main {
     font-size:1.3rem;
     color:brown;
     line-height: 2rem;
+
+}
+ul {
     text-decoration: none;
 }
 footer {
