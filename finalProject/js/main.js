@@ -12,15 +12,15 @@ request.onload = function() {
 function populateHeader(jsonObj) {
     const myH1 = document.createElement('h1');
     myH1.textContent = jsonObj['title'];
-    header.appendChild(myH1);
-  
+    main.appendChild(myH1);
+
     const myPara = document.createElement('p');
     myPara.textContent = jsonObj['description'] + ' //price: ' + jsonObj['price'];
-    header.appendChild(myPara);
+    main.appendChild(myPara);
 
     const myImg = document.createElement('img')
     myImg.setAttribute('src', jsonObj['image'])
-    header.appendChild(myImg)
+    main.appendChild(myImg)
 }
 
 fetch('https://fakestoreapi.com/products?limit=5')
