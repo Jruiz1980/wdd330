@@ -1,5 +1,7 @@
 
-/*function populateHeader(jsonObj) {
+let main = document.querySelector('main');
+
+function populateHeader(jsonObj) {
     const myH1 = document.createElement('h1');
     myH1.textContent = jsonObj['title'];
     main.appendChild(myH1);
@@ -13,51 +15,26 @@
     main.appendChild(myImg)
 }
 
-/*fetch('https://fakestoreapi.com/products?limit=5')
-            .then(res=>res.json())
-            .then(json=>console.log(json))
-let productList = document.insertById("#products")
+function showProducts(jsonObj) {
+  const products = jsonObj['title'];
 
+  for (var i = 0; i < products.length; i++) {
+    const myArticle = document.createElement('article');
+    const myH2 = document.createElement('h2');
+    const myPara1 = document.createElement('p');
+    const myPara2 = document.createElement('p');
+    const myPara3 = document.createElement('p');
+    const myList = document.createElement('ul');
 
-let requestURL = "https://fakestoreapi.com/products";
-let request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
-request.onload = function() {
-    const products = request.response;
-    populateHeader(products);
-    products(products);
-}*/
-function populateHeader(jsonObj) {
-    const myH1 = document.createElement('h1');
-    myH1.textContent = jsonObj['squadName'];
-    header.appendChild(myH1);
+    myH2.textContent = products[i].name;
+    myPara1.textContent = 'Product: ' + products[i].Product;
+    myPara2.textContent = 'Price: ' + products[i].Price;
+    myPara3.textContent = 'Description:';
 
-    const myPara = document.createElement('p');
-    myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
-    header.appendChild(myPara);
-}
-function showHeroes(jsonObj) {
-  const heroes = jsonObj["members"];
-
-  for (var i = 0; i < heroes.length; i++) {
-    const myArticle = document.createElement("article");
-    const myH2 = document.createElement("h2");
-    const myPara1 = document.createElement("p");
-    const myPara2 = document.createElement("p");
-    const myPara3 = document.createElement("p");
-    const myList = document.createElement("ul");
-
-    myH2.textContent = heroes[i].name;
-    myPara1.textContent = "Secret identity: " + heroes[i].secretIdentity;
-    myPara2.textContent = "Age: " + heroes[i].age;
-    myPara3.textContent = "Superpowers:";
-
-    const superPowers = heroes[i].powers;
-    for (var j = 0; j < superPowers.length; j++) {
-      const listItem = document.createElement("li");
-      listItem.textContent = superPowers[j];
+    const img = products[i].image;
+    for (var j = 0; j < img.length; j++) {
+      const listItem = document.createElement('li');
+      listItem.setAttribute = img[j];
       myList.appendChild(listItem);
     }
 
@@ -67,17 +44,23 @@ function showHeroes(jsonObj) {
     myArticle.appendChild(myPara3);
     myArticle.appendChild(myList);
 
-    section.appendChild(myArticle);
+    main.appendChild(myArticle);
   }
 }
-  
-const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
-const request = new XMLHttpRequest();
-request.open('GET', requestURL);
+
+/*fetch('https://fakestoreapi.com/products?limit=5')
+            .then(res=>res.json())
+            .then(json=>console.log(json))
+let productList = document.insertById("#products")*/
+
+
+let requestURL = "https://fakestoreapi.com/products";
+let request = new XMLHttpRequest();
+request.open('POST', requestURL);
 request.responseType = 'json';
 request.send();
 request.onload = function() {
-    const superHeroes = request.response;
-    populateHeader(superHeroes);
-    showHeroes(superHeroes);
+    const products = request.response;
+    populateHeader(products);
+    showProducts(products);
 }
