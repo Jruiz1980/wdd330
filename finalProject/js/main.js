@@ -1,18 +1,30 @@
+async function populate() {
 
-let main = document.querySelector('main');
+  const requestURL = "https://fakestoreapi.com/products";
+  const request = new Request(requestURL);
+
+  const response = await fetch(request);
+  const products = await response.json();
+
+  populateHeader(products);
+  showProducts(products);
+
+}
+
 
 function populateHeader(jsonObj) {
-    const myH1 = document.createElement('h1');
-    myH1.textContent = jsonObj['title'];
-    main.appendChild(myH1);
+  let main = document.querySelector('main');
+  const myH1 = document.createElement('h1');
+  myH1.textContent = jsonObj['title'];
+  main.appendChild(myH1);
 
-    const myPara = document.createElement('p');
-    myPara.textContent = jsonObj['description'] + ' //price: ' + jsonObj['price'];
-    main.appendChild(myPara);
+  const myPara = document.createElement('p');
+  myPara.textContent = jsonObj['description'] + ' //price: ' + jsonObj['price'];
+  main.appendChild(myPara);
 
-    const myImg = document.createElement('img')
-    myImg.setAttribute('src', jsonObj['image'])
-    main.appendChild(myImg)
+  const myImg = document.createElement('img')
+  myImg.setAttribute('src', jsonObj['image'])
+  main.appendChild(myImg)
 }
 
 function showProducts(jsonObj) {
@@ -52,15 +64,3 @@ function showProducts(jsonObj) {
             .then(res=>res.json())
             .then(json=>console.log(json))
 let productList = document.insertById("#products")*/
-
-
-let requestURL = "https://fakestoreapi.com/products";
-let request = new XMLHttpRequest();
-request.open('POST', requestURL);
-request.responseType = 'json';
-request.send();
-request.onload = function() {
-    const products = request.response;
-    populateHeader(products);
-    showProducts(products);
-}
