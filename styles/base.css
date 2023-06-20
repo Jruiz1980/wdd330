@@ -2,6 +2,7 @@ body {
     background-color:rgb(216, 208, 197);
     max-width: 800px;
     margin: 0 auto;
+    text-decoration: none;
 }
 header {
     display:grid;
