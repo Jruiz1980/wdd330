@@ -32,7 +32,7 @@ main {
     line-height: 2rem;
 
 }
-main ul {
+main ul li a{
     text-decoration: none;
 }
 footer {
