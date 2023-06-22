@@ -66,7 +66,7 @@ fetch('https://fakestoreapi.com/products?limit=5')
 let productList = document.insertById("#products")*/
 
 function cargarREST() {
-	fetch('https://fakestoreapi.com/products?limit=5')
+	fetch("https://jruiz1980.github.io/wdd330/json/fakeStore.json")
 	.then(function(res) {
 		return res.json();
 	})
