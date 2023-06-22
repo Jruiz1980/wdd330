@@ -1,4 +1,4 @@
-async function populate() {
+/*async function populate() {
 
   const requestURL = "https://fakestoreapi.com/products";
   const request = new Request(requestURL);
@@ -60,7 +60,27 @@ function showProducts(jsonObj) {
   }
 }
 
-/*fetch('https://fakestoreapi.com/products?limit=5')
+fetch('https://fakestoreapi.com/products?limit=5')
             .then(res=>res.json())
             .then(json=>console.log(json))
 let productList = document.insertById("#products")*/
+
+function cargarREST() {
+	fetch('https://fakestoreapi.com/products?limit=5')
+	.then(function(res) {
+		return res.json();
+	})
+	
+	.then(function(images) {
+		let html = src="";
+		images.forEach(function(images) {
+		html += ` 
+			<li>
+				<a href="${images.image}">Ver Imagen</a>
+				${images.price}
+			</li>
+			`;
+		});
+	document.getElementById("#products").innerHTML = html;
+	}) 
+}
