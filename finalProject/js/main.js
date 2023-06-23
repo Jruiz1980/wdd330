@@ -60,11 +60,6 @@ function showProducts(jsonObj) {
   }
 }
 
-fetch('https://fakestoreapi.com/products?limit=5')
-            .then(res=>res.json())
-            .then(json=>console.log(json))
-let productList = document.insertById("#products")*/
-
 function cargarREST() {
 	fetch("https://jruiz1980.github.io/wdd330/json/fakeStore.json")
 	.then(function(res) {
@@ -83,4 +78,8 @@ function cargarREST() {
 		});
 	document.getElementById("#products").innerHTML = html;
 	}) 
-}
+}*/
+
+fetch('https://fakestoreapi.com/products')
+            .then(res=>res.json())
+            .then(json=>console.log(json))
