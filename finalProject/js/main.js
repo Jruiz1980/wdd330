@@ -82,4 +82,21 @@ function cargarREST() {
 
 fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
-            .then(json=>console.log(json))
+            .then(json=>displayProducts(json))
+            
+
+
+fetch('https://fakestoreapi.com/products')
+  .then(response => response.json())
+  .then(data => {
+    const imageUrl = data.image_url;
+    return fetch(imageUrl);
+  })
+  .then(response => response.blob())
+  .then(blob => {
+    const url = URL.createObjectURL(blob);
+    const img = document.createElement('img');
+    img.src = url;
+    document.body.appendChild(img);
+  })
+  .catch(error => console.error(error));
