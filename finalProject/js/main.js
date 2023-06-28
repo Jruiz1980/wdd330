@@ -80,23 +80,18 @@ function cargarREST() {
 	}) 
 }*/
 
-fetch('https://fakestoreapi.com/products')
+/*fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
-            .then(json=>displayProducts(json))
+            .then(json=>displayProducts(json))*/
             
 
 
 fetch('https://fakestoreapi.com/products')
   .then(response => response.json())
   .then(data => {
-    const imageUrl = data.image_url;
-    return fetch(imageUrl);
-  })
-  .then(response => response.blob())
-  .then(blob => {
-    const url = URL.createObjectURL(blob);
-    const img = document.createElement('img');
-    img.src = url;
-    document.body.appendChild(img);
+    let prods = document.getElementById('products');
+    for (prod of data) {
+      prods.innerHTML += `<img src="${prod.image}" width='100px' height='150px' id="prodImg" alt="">`;
+    }
   })
   .catch(error => console.error(error));
