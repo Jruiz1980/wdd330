@@ -1,5 +1,5 @@
 
-fetch('https://fakestoreapi.com/products')
+fetch('https://fakestoreapi.com/products/category/electronics')
   .then(response => response.json())
   .then(data => {
     let prods = document.getElementById('products');

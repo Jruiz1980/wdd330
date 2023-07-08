@@ -22,9 +22,10 @@ div {
     max-width: 2.5%;
 }
 .hero {
-    max-width:90%;
     padding-bottom: 50px;
     padding-left: 70px;
+    width: 50%;
+    margin: auto;
 }
 
 main {
@@ -35,7 +36,9 @@ main {
     color:#4B2D9F;
 }
 main section img {
+    display:grid;
     justify-content:center;
+    align-content: center;
 }
 button {
     font-family: Arial, Helvetica, sans-serif;
