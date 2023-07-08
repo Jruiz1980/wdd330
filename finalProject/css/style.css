@@ -15,6 +15,12 @@ h1 {
     text-align: center;
     background-color: #E3C515;
 }
+div {
+    text-align: right;
+}
+.shopping {
+    max-width: 5%;
+}
 .hero {
     max-width:90%;
     padding-bottom: 50px;
