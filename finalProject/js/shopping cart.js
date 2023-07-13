@@ -117,7 +117,7 @@ const getProducts = async () => {
 
 getProducts();
 
-data.forEach((product)=> {
+data.forEach((prod)=> {
     let content = document.createElement("div");
     content.className = "card";
     content.innerHTML =`
@@ -158,3 +158,24 @@ data.forEach((product)=> {
         }
     });
 });
+
+shopping.addEventListener("click", () => {
+    const modalHeader = document.createElement("div");
+    modalHeader.className = "modal-header"
+    modalHeader.innerHTML = `
+    <h1 class="modal-header-title">Carrito.</h1>
+    `;
+    modalContainer.append(modal-header);
+
+     const modalButton = document.createElement("h1")
+     modalButton.innerText = "x";
+     modalButton.className = "modal-header-button";
+
+     modalHeader.append(modalButton);
+
+     let shoppingContent = document.createElement("div");
+     carrito.className = "modal-content";
+     carrito.innerHTML = `
+     
+     `
+})
