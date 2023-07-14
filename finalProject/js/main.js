@@ -1,9 +1,10 @@
 
-fetch('https://fakestoreapi.com/products/category/electronics')
+fetch('https://fakestoreapi.com/products')
   .then(response => response.json())
   .then(data => {
     let prods = document.getElementById('products');
     for (prod of data) {
+      prods.className = "products";
       prods.innerHTML += `<section class="${prod.category}">
                             <img src="${prod.image}" width='150px' height='150px' id="prodImg" alt="">
                             <p>${prod.title}</p>
@@ -11,4 +12,5 @@ fetch('https://fakestoreapi.com/products/category/electronics')
                           </section>`;
     }
   })
+
   .catch(error => console.error(error));

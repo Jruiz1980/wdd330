@@ -9,7 +9,7 @@ const cantidadCarrito = document.getElementById("cantidadCarrito");
 /*let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 const getProducts = async () => {
-    const response = await fetch("../../json/fakeStore.json");
+    const response = await fetch('https://fakestoreapi.com/products');
     const data = await response.json();
     console.log(data);
 };
@@ -77,45 +77,68 @@ shopping.addEventListener("click", () => {
      carrito.innerHTML = `
      
      `
-})*/
+})
 let carrito = [];
+async function loadJSONS(){
+    carrito.push(await fetch('https://fakestoreapi.com/products').then(res => res.json()));
+}
+loadJSONS();
+console.log(carrito);
 
-productos.forEach((product) => {
-    let content = document.createElement("div");
-    content.className = "card";
-    content.innerHTML = `
-    <img src="${product.image}">
-    <h3>${product.name}</h3>
-    <p class="price">$ ${product.price}</p>
-    `;
+*/
 
-    shopContent.append(content);
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-    let comprar = document.createElement("button")
-    comprar.innerText = "comprar";
-    comprar.className = "comprar";
+async function getProducts() {
+    const response = await fetch('https://fakestoreapi.com/products');
+    const data = await response.json();
 
-    content.append(comprar);
+    data.forEach((product) => {
+        let content = document.createElement("div");
+        content.className = "card";
+        content.innerHTML = `
+            <img src="${product.image}">
+            <h3>${product.title}</h3>
+            <p class="price">$ ${product.price.toFixed(2)}</p>
+            `;
+        console.log(data);
+        
 
-    comprar.addEventListener("click", () => {
-        carrito.push({
-            id: product.id,
-                image: product.image,
-                name: product.name,
-                price: product.price,
-                cantidad: product.cantidad,
-        })
-    })
-});
+        shopContent.append(content);
+
+        let comprar = document.createElement("button")
+        comprar.innerText = "comprar";
+        comprar.className = "comprar";
+
+        content.append(comprar);
+
+        comprar.addEventListener("click", () => {
+            carrito.push({
+                id: product.id,
+                    image: product.image,
+                    title: product.title,
+                    price: product.price,
+                    cantidad: product.cantidad,
+            });
+        });
+    });
+};
+
+getProducts();
  shopping.addEventListener("click", () => {
-    window.open("/finalProject/shopping-cart/shoppingCart.html", "_self"); 
+    /*window.open("/finalProject/shopping-cart/shoppingCart.html", "_self");*/ 
     const modalHeader = document.createElement("div");
     modalHeader.className ="modal-header";
     modalHeader.innerHTML = `
     <h1 class="modal-header">CARRITO</h1>
-    `
+    `;
     modalContainer.append(modalHeader)
 
+    const modalbutton = document.createElement("h2");
+    modalbutton.innerText = "X";
+    modalbutton.className = "modal-header-button";
+
+    modalHeader.append(modalbutton);
     
     carrito.forEach((product) => {
         let carritoContent = document.createElement("div")
