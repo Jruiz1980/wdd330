@@ -125,39 +125,4 @@ async function getProducts() {
 };
 
 getProducts();
- shopping.addEventListener("click", () => {
-    /*window.open("/finalProject/shopping-cart/shoppingCart.html", "_self");*/ 
-    const modalHeader = document.createElement("div");
-    modalHeader.className ="modal-header";
-    modalHeader.innerHTML = `
-    <h1 class="modal-header">CARRITO</h1>
-    `;
-    modalContainer.append(modalHeader)
-
-    const modalbutton = document.createElement("h2");
-    modalbutton.innerText = "X";
-    modalbutton.className = "modal-header-button";
-
-    modalHeader.append(modalbutton);
-    
-    carrito.forEach((product) => {
-        let carritoContent = document.createElement("div")
-        carritoContent.className = "modal-content"
-        carritoContent.innerHTML = `
-        <img src="${product.image}">
-        <h3>${product.name}</h3>
-        <p class="price">$ ${product.price}</p>
-        `;
-
-        modalContainer.append(carritoContent)
-    });
-
-    const total = carrito.reduce((acc, el) => acc + el.price, 0);
-
-    const totalBuying = document.createElement("div")
-    totalBuying.className = "total-content"
-    totalBuying.innerHTML = `total:$ ${total}`;
-    modalContainer.append(totalBuying);
-    
- }) 
     
