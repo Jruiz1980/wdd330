@@ -55,6 +55,7 @@ const removeProduct = () => {
     carrito = carrito.filter((carritoId) => {
         return carritoId !== findId;
     });
+    counterItem();
     shopCart();
 };
 
