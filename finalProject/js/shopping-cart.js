@@ -19,7 +19,7 @@ async function getProducts() {
             };
         });
 
-    console.log(modifiedData);
+    console.log(carrito);
 
     modifiedData.forEach((product) => {
         let content = document.createElement("div");
