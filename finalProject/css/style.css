@@ -7,7 +7,7 @@ header {
     grid-template-columns: 1fr;
     padding: 0 10px;
 }
-h1 {
+head-title {
     font-family:'Times New Roman', Times, sans-serif;
     color:#4B2D9F;
     font-size: 3em;
