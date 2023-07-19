@@ -29,7 +29,7 @@ async function getProducts() {
             <p class="price">$ ${product.price.toFixed(2)}</p>
             `;
         console.log(product);
-        
+    
         shopContent.append(content);
 
         let buy = document.createElement("button")
@@ -62,4 +62,4 @@ async function getProducts() {
     });
 }
 getProducts();
-    
+
