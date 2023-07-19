@@ -15,9 +15,9 @@ h1 {
     text-align: center;
     background-color: #E3C515;
 }
-/**div, #verCarrito, .ver-carrito {
+div, #verCarrito, .ver-carrito {
     text-align: right;
-}*/
+}
 #shopping {
     cursor: pointer;
     max-width: 2.5%;
