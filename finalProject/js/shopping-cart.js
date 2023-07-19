@@ -3,7 +3,6 @@
 const shopContent = document.getElementById("shopContent");
 const shopping = document.getElementById("shopping");
 const modalContainer = document.getElementById("modal-container");
-const showAlert = document.getElementById("showAlert");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 
