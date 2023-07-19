@@ -2,7 +2,7 @@
     /*window.open("/finalProject/shopping-cart/shoppingCart.html", "_self");*/ 
     const shopCart = () => {
     modalContainer.innerHTML = "";
-    modalContainer.style.display = "flex";
+    modalContainer.style.display = "grid";
     const modalHeader = document.createElement("div");
     modalHeader.className ="modal-header";
     modalHeader.innerHTML = `
