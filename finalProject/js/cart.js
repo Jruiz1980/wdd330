@@ -1,12 +1,10 @@
-/*
-    /*window.open("/finalProject/shopping-cart/shoppingCart.html", "_self");*/ 
     const shopCart = () => {
     modalContainer.innerHTML = "";
     modalContainer.style.display = "grid";
     const modalHeader = document.createElement("div");
     modalHeader.className ="modal-header";
     modalHeader.innerHTML = `
-    <h1 class="modal-header">CARRITO</h1>
+    <h1 class="modal-header">SHOPPING CART</h1>
     `;
     modalContainer.append(modalHeader)
 
@@ -61,4 +59,4 @@ const removeProduct = () => {
 const counterItem = () => {
     cantidadCarrito.style.display = "block";
     cantidadCarrito.innerText = carrito.length;
-    }
+}
