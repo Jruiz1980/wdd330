@@ -4,7 +4,7 @@
     const modalHeader = document.createElement("div");
     modalHeader.className ="modal-header";
     modalHeader.innerHTML = `
-    <h1 class="modal-header">SHOPPING CART</h1>
+    <h2 class="modal-header">SHOPPING CART</h2>
     `;
     modalContainer.append(modalHeader)
 

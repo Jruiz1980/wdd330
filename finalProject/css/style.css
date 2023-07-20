@@ -1,14 +1,10 @@
 @media only screen and (min-width: 1rem) {
-  /* {
-    max-width:300px;
-  }*/
   body {
     background: #a59cd3;
   }
   header {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 0 10%;
     position: relative;
   }
   .head-title {
@@ -23,7 +19,7 @@
     left: 3.1rem;
   }
   .shopping {
-    margin-inline-start: 9ch;
+    margin-inline-start: 11ch;
   }
   #shopping {
     cursor: pointer;
@@ -34,7 +30,7 @@
   }
   .hero {
     padding-bottom: 3rem;
-    width: 18rem;
+    width: 23rem;
   }
 
   main,
@@ -88,7 +84,7 @@
     position: fixed;
     overflow: auto;
     z-index: 9;
-    top: 12vh;
+    top: 10vh;
     scrollbar-color: none;
     text-align: center;
   }
@@ -116,10 +112,10 @@
   }
   .modal-container > .modal-content {
     display: grid;
-    grid-template-columns:1fr 1fr 0.5fr 0.5fr 0.5fr 0.25fr;
+    grid-template-columns:repeat(2, 50px) repeat(3, 50px) 0.25fr;
     justify-content: space-around;
     align-items: center;
-    width: 3.5rem;
+    width: 3.2rem;
     margin: 0 10rem;
     grid-gap:0.8rem;
   }
@@ -156,19 +152,53 @@
   }
 }
 @media only screen and (min-width: 37.5rem){
+  .head-title {
+    font-size:3rem;
+    top: 10rem;
+    left: 6rem;
+  }
   .shopping {
-    margin-inline-start: 12.7ch;
+    margin-inline-start: 28ch;
   }
   #shopping {
-    max-width: 2.5%;
+    max-width: 5%;
   }
   .cart {
-    width:80px;
+    width:100px;
   }
   .hero {
     padding-bottom: 4rem;
-    width: 20rem;
-    margin: 0 1rem;
+    width: 44rem;
+    margin: 0 0.7rem;
   }
-
+  .cantidad-carrito {
+    font-size: 0.9em;
+    text-align:center;
+    padding: 0.3rem;
+    top: -4.8rem;
+    right: -2.3rem;
+  }
+  .modal-container {
+    width:37rem;
+    margin:4.1rem;
+    max-height: 88vh;
+    top: 12vh;
+  }
+  .modal-container > .modal-content {
+    width: 17rem;
+    margin: 1rem 10rem;
+    grid-gap:0.9rem;
+    grid-template-columns:repeat(5, 100px) 0.25fr;
+    margin-bottom: 1rem;
+  }
+  .modal-container > div > img {
+    height:100px;
+    width:100px;
+  }
+  .modal-content {
+    font-size:1.5rem;
+  }
+  .modal-content > h3 {
+    font-size: 1.5rem;
+  }
 }
