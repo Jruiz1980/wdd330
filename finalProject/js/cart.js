@@ -19,11 +19,16 @@
     modalHeader.append(modalbutton);
     
     carrito.forEach((product) => {
+        const maxLength = 10;
+        let title = product.title;
+        if (title.length > maxLength) {
+            title = title.substring(0, maxLength) + "...";
+        }
         let carritoContent = document.createElement("div")
         carritoContent.className = "modal-content"
         carritoContent.innerHTML = `
             <img src="${product.image}">
-            <h3>${product.title}</h3>
+            <h3>${title}</h3>
             <p>$${product.price.toFixed(2)}</p>
             <p> Items: ${product.quantity}</p>
             <p> Total: $${(product.quantity * product.price).toFixed(2)}</p> 
