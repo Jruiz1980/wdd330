@@ -76,6 +76,7 @@
 
   /*--SHOPPING CART DISPLAY--*/
   .modal-container {
+    display:grid;
     width: 23rem;
     margin:0;
     max-height: 88vh;
@@ -181,8 +182,8 @@
   .modal-container {
     width:37rem;
     margin:4.1rem;
-    max-height: 88vh;
     top: 12vh;
+    height: auto;
   }
   .modal-container > .modal-content {
     width: 17rem;
@@ -206,13 +207,13 @@
   .head-title {
     font-size: 4rem;
     top: 10rem;
-    left: 26rem;
+    left: 29rem;
   }
   .shopping {
     margin-inline-start: 64ch;
   }
   #shopping {
-    max-width: 3%;
+    max-width: 2.5%;
   }
   .cart {
     width:100px;
@@ -238,8 +239,8 @@
   .modal-container {
     width:50rem;
     margin:0 28rem;
-    max-height: 180vh;
     top: 8vh;
+    height: auto;
   }
   .modal-container > .modal-content {
     width: 30rem;
@@ -257,5 +258,9 @@
   }
   .modal-content > h3 {
     font-size: 1.5rem;
+  }
+  .card > img {
+    width: 12rem;
+    height:12rem;
   }
 }
