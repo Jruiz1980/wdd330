@@ -202,3 +202,60 @@
     font-size: 1.5rem;
   }
 }
+@media only screen and (min-width: 64rem) {
+  .head-title {
+    font-size: 4rem;
+    top: 10rem;
+    left: 26rem;
+  }
+  .shopping {
+    margin-inline-start: 64ch;
+  }
+  #shopping {
+    max-width: 3%;
+  }
+  .cart {
+    width:100px;
+  }
+  .hero {
+    padding-bottom: 4rem;
+    width: 64rem;
+    margin: 0 18rem;
+  }
+   .shop-content {
+    grid-template-columns: repeat(4, 1fr);
+   }
+  .cantidad-carrito {
+    font-size: 0.9em;
+    text-align:center;
+    padding: 0.3rem;
+    top: -4.8rem;
+    right: -2.3rem;
+  }
+  .modal-header > h2 {
+    font-size: 2.2rem;
+  }
+  .modal-container {
+    width:50rem;
+    margin:0 28rem;
+    max-height: 180vh;
+    top: 8vh;
+  }
+  .modal-container > .modal-content {
+    width: 30rem;
+    margin: 1rem 10rem;
+    grid-gap:1rem;
+    grid-template-columns:repeat(5, 120px) 0.25fr;
+    margin-bottom: 1rem;
+  }
+  .modal-container > div > img {
+    height:120px;
+    width:120px;
+  }
+  .modal-content {
+    font-size:1.5rem;
+  }
+  .modal-content > h3 {
+    font-size: 1.5rem;
+  }
+}
