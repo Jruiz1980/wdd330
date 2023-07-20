@@ -24,7 +24,7 @@ async function getProducts() {
         content.innerHTML = `
             <img src="${product.image}">
             <h3>${product.title}</h3>
-            <p class="price">$ ${product.price.toFixed(2)}</p>
+            <p class="price" width=150 >$ ${product.price.toFixed(2)}</p>
             `;
         console.log(product);
         

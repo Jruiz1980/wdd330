@@ -50,12 +50,11 @@
 }
 shopping.addEventListener("click", shopCart);
 
-const removeProduct = (index) => {
+const removeProduct = () => {
     const findId = carrito.find((element) => element.id);
     carrito = carrito.filter((carritoId) => {
         return carritoId !== findId;
     });
-    carrito.splice(index, 1);
     counterItem();
     shopCart();
 };

@@ -1,3 +1,6 @@
+/* {
+    max-width: 800px;
+}*/
 body {
     margin:1px;
     background:#A59CD3;
@@ -21,7 +24,7 @@ header {
 }
 .shopping {
     text-align: right;
-    margin-inline-start:80ch;
+    margin-inline-start:70ch;
     font-size:36px;
 }
 #shopping {
@@ -37,17 +40,11 @@ header {
 
 main, .products {
     margin-top:30px;
-    margin-left:80px;
-    margin-right:80px;
+    margin-left:15px;
+    margin-right:30px;
     font-family: Arial, Helvetica, sans-serif;
     color:#4B2D9F;
 }
-/*main section {
-    display:grid;
-    grid-template-rows: 1fr 50px 50px;
-    justify-content:center;
-    align-content: center;
-}*/
 button {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -62,15 +59,13 @@ button {
 }
 .shop-content {
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    justify-content:space-between;
-    flex-wrap: wrap;
+    grid-template-columns:repeat(4, 1fr);
     margin-top:30px;
     margin-left:80px;
     margin-right:80px;
     font-family: Arial, Helvetica, sans-serif;
     color:#4B2D9F;
-    gap:20px;
+    gap:10px;
 }
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
