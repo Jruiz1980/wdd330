@@ -25,8 +25,8 @@
             <img src="${product.image}">
             <h3>${product.title}</h3>
             <p>$${product.price.toFixed(2)}</p>
-            <p> Quantity: ${product.quantity}</p>
-            <p> Total: $${product.quantity * product.price} 
+            <p> Items: ${product.quantity}</p>
+            <p> Total: $${(product.quantity * product.price).toFixed(2)}</p> 
         `;
 
         modalContainer.append(carritoContent)
